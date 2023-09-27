@@ -1,5 +1,5 @@
 constant: big_query_model_name {
-  value: "bqml_demo_sudipto.llm_bqml.llm_model"
+  value: "bqml-demo-sudipto.llm_bqml.llm_model"
 }
 
 constant: generate_text_table_name {
