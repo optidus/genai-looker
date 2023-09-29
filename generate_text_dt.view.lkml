@@ -47,7 +47,7 @@ view: generate_text {
     label: " Prompt"
     type: string
     suggestions: [
-      "Perform sentiment analysis on the following text"
+      "Given the following customer feedback, please identify the overall sentiment (positive, negative, or neutral). Only reply with one of the 3 categories and nothing else."
       , "Extract the named entities from the text and output the named entities only"
       , "Translate the text into Spanish"
       , "Summarize the text into one sentence"
