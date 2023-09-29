@@ -5,6 +5,7 @@ view: generate_text {
           @{generate_text_primary_key}
           , prompt
           , ml_generate_text_result
+          , ml_generate_text_status
         FROM ML.GENERATE_TEXT(
           MODEL `@{big_query_model_name}`, (
             SELECT
