@@ -1,5 +1,5 @@
 view: complaint_database {
-  sql_table_name: `bigquery-public-data.cfpb_complaints.complaint_database` ;;
+  sql_table_name: `bqml-demo-sudipto.bqml_llm_trial.complaint_data` ;;
 
   dimension: company_name {
     type: string

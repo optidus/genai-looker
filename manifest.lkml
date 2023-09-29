@@ -3,7 +3,7 @@ constant: big_query_model_name {
 }
 
 constant: generate_text_table_name {
-  value: "bigquery-public-data.cfpb_complaints.complaint_database"
+  value: "bqml-demo-sudipto.bqml_llm_trial.complaint_data"
 }
 
 constant: generate_text_primary_key {
