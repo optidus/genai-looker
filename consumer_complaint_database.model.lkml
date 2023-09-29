@@ -12,10 +12,10 @@ explore: complaint_database {
   always_filter: {
     filters: [
       generate_text.prompt_input: "",
-      generate_text.max_output_tokens: "",
-      generate_text.temperature: "",
-      generate_text.top_k: "",
-      generate_text.top_p: ""
+      generate_text.max_output_tokens: "100",
+      generate_text.temperature: "0.1",
+      generate_text.top_k: "40",
+      generate_text.top_p: "0.8"
     ]
   }
   join: generate_text {
