@@ -133,4 +133,11 @@ view: generate_text {
     html:<div style="white-space:pre">{{value}}</div>;;
     group_label: "Safety Attributes"
   }
+
+  dimension:  job_status {
+    type: string
+    sql:  ${TABLE}.ml_generate_text_status ;;
+    html:<div style="white-space:pre">{{value}}</div>;;
+  }
+
 }
