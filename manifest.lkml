@@ -13,3 +13,19 @@ constant: generate_text_primary_key {
 constant: generate_text_text_field {
   value: "consumer_complaint_narrative"
 }
+
+constant: generate_mail_primary_key {
+  value: "id"
+}
+
+constant: generate_mail_country {
+  value: "country"
+}
+
+constant: generate_mail_cohort {
+  value: "cohort"
+}
+
+constant: generate_mail_table_name {
+  value: "`bqml-demo-sudipto.bqml_llm.user_data`"
+}
