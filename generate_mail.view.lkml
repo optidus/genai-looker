@@ -8,10 +8,10 @@ view: generate_mail {
           , ml_generate_text_result
           , ml_generate_text_status
         FROM ML.GENERATE_TEXT(
-          MODEL `@{big_query_model_name}`, (
+          MODEL `@{big_query_model_name_2}`, (
             SELECT
               @{generate_mail_primary_key}
-              , CONCAT('You are a creative marketing professional. You only create marketing and advertising content and nothing else. For a customer whose name is ',@{generate_mail_name},' living in ', @{generate_mail_country}, ' and whose segment type is ',@{generate_mail_cohort},', create a personalized 2-3 line email about a list of things in their country that will interest them based on their cohort. ') AS prompt
+              , CONCAT('You are a creative marketing professional. You only create marketing ]content and nothing else. For a customer whose name is ',@{generate_mail_name},' living in ', @{generate_mail_country}, ' and whose segment type is ',@{generate_mail_cohort},', create a personalized 2-3 line email about potential destinations in their country that will interest them based on their cohort. ') AS prompt
             FROM @{generate_mail_table_name} AS model_query
             ),
           STRUCT(

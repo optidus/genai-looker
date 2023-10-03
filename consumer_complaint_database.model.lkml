@@ -38,6 +38,6 @@ explore: user_data {
   join: generate_mail {
     type: left_outer
     relationship: one_to_one
-    sql_on: complaint_database.@{generate_mail_primary_key} = generate_text.@{generate_mail_primary_key} ;;
+    sql_on: user_data.@{generate_mail_primary_key} = generate_mail.@{generate_mail_primary_key} ;;
   }
 }
