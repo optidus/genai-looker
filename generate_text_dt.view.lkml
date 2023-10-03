@@ -49,10 +49,9 @@ view: generate_text {
     type: string
     suggestions: [
       "Given the following customer feedback, please identify the overall sentiment (positive, negative, or neutral). Only reply with one of the 3 categories and nothing else."
-      , "Extract the named entities from the text and output the named entities only"
-      , "Translate the text into Spanish"
-      , "Summarize the text into one sentence"
-      , "Classify the text into one of following categories: [Positive, Negative], and only output one word"
+      , "Translate the text into Thai"
+      , "Translate the text into Hindi"
+      , "What category does the following feedback fall into? Return one of these only: Banking, Credit Cards, Customer Experience or Others"
     ]
   }
 

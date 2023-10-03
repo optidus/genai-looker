@@ -26,6 +26,10 @@ constant: generate_mail_cohort {
   value: "cohort"
 }
 
+constant: generate_mail_name {
+  value: "first_name"
+}
+
 constant: generate_mail_table_name {
   value: "`bqml-demo-sudipto.bqml_llm.user_data`"
 }

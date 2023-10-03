@@ -10,9 +10,9 @@ view: generate_mail {
         FROM ML.GENERATE_TEXT(
           MODEL `@{big_query_model_name}`, (
             SELECT
-              @{generate_text_primary_key}
-              , CONCAT({% parameter prompt_input %},': """', @{generate_text_text_field}, '"""') AS prompt
-            FROM @{generate_text_table_name} AS model_query
+              @{generate_mail_primary_key}
+              , CONCAT('You are a creative marketing professional. You only create marketing and advertising content and nothing else. For a customer whose name is ',@{generate_mail_name},' living in ', @{generate_mail_country}, ' and whose segment type is ',@{generate_mail_cohort},', create a personalized 2-3 line email about a list of things in their country that will interest them based on their cohort. ') AS prompt
+            FROM @{generate_mail_table_name} AS model_query
             ),
           STRUCT(
             {% if max_output_tokens._parameter_value > 1024 or max_output_tokens._parameter_value < 1 %} 50 {% else %} {% parameter max_output_tokens %} {% endif %} AS max_output_tokens
@@ -28,9 +28,8 @@ view: generate_mail {
     label: " Prompt"
     type: string
     suggestions: [
-      "Given the following customer feedback, please identify the overall sentiment (positive, negative, or neutral). Only reply with one of the 3 categories and nothing else."
-      , "Translate the text into Thai"
-      , "Translate the text into Hindi"
+      "Hyperpersonalized mail generation"
+
     ]
   }
 
