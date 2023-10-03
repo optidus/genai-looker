@@ -29,7 +29,6 @@ view: generate_mail {
     type: string
     suggestions: [
       "Hyperpersonalized mail generation"
-
     ]
   }
 

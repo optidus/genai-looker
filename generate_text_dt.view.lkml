@@ -47,12 +47,22 @@ view: generate_text {
   parameter: prompt_input {
     label: " Prompt"
     type: string
-    suggestions: [
-      "Given the following customer feedback, please identify the overall sentiment (positive, negative, or neutral). Only reply with one of the 3 categories and nothing else."
-      , "Translate the text into Thai"
-      , "Translate the text into Hindi"
-      , "What category does the following feedback fall into? Return one of these only: Banking, Credit Cards, Customer Experience or Others"
-    ]
+    allowed_value: {
+      label: "Sentiment Analysis"
+      value: "Given the following customer feedback, please identify the overall sentiment (positive, negative, or neutral). Only reply with one of the 3 categories and nothing else."
+    }
+    allowed_value: {
+      label: "Translate to Thai"
+      value: "Translate the following text into Thai"
+    }
+    allowed_value: {
+      label: "Translate to Hindi"
+      value: "Translate the following text into Hindi"
+    }
+    allowed_value: {
+      label: "Categorize Feedback"
+      value: "What category does the following feedback fall into? Return one of these only: Banking, Credit Cards, Customer Experience or Others"
+    }
   }
 
   # https://cloud.google.com/bigquery/docs/reference/standard-sql/bigqueryml-syntax-generate-text#arguments
